@@ -25,7 +25,7 @@ export default function UploadingPage() {
     useEffect(() => {
 
 		//Call API to send video
-		/*const storageRef = ref(storage, fileName)
+		const storageRef = ref(storage, fileName)
 		const uploadTask = uploadBytesResumable(storageRef, videoBlob)
 
 		uploadTask.on("state_changed",
@@ -36,8 +36,7 @@ export default function UploadingPage() {
 			(error) => {
 				alert(error)
 			}
-		)*/
-		console.log(videoBlob)
+		)
 	},[])
 
     return (
