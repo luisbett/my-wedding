@@ -15,9 +15,10 @@ export default function RecordingPage() {
 		navigate('/upload', { state: { videoBlob: blob } } )
 	}, })
 
+	//{!mediaBlobUrl && <VideoPreview stream={previewStream} />}
+
     return (
         <>
-			{!mediaBlobUrl && <VideoPreview stream={previewStream} />}
 			<RecordingButton onStart={startRecording} onStop={stopRecording} duration={15} />
 		</>
     )
