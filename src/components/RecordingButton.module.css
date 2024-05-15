@@ -1,0 +1,55 @@
+.container {
+	position: fixed;
+	bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.recording-button {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 5px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.recording-button .inner {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background: transparent;
+	background-color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.recording-button.recording .inner {
+	width: 35px;
+	height: 35px;
+	border-radius: 5px;
+}
+
+.timer {
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: transparent;
+}
+
+.timer.recording {
+	color: #000000;
+	text-shadow: 1px 1px 2px #FFFFFF;
+}
