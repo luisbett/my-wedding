@@ -11,9 +11,9 @@ export default function RecordingPage() {
 	const navigate = useNavigate()
 
 	//useMediaRecorder hook
-	const { startRecording, stopRecording, mediaBlobUrl, previewStream } = useReactMediaRecorder({ video: true, askPermissionOnMount: true, onStop(_blobUrl, blob) {
+	const { startRecording, stopRecording, mediaBlobUrl, previewStream } = useReactMediaRecorder({ video: { facingMode: { exact: 'user' } }, askPermissionOnMount: true, onStop(_blobUrl, blob) {
 		navigate('/upload', { state: { videoBlob: blob } } )
-	}, })
+	} })
 
     return (
         <>
