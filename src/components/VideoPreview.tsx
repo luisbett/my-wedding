@@ -16,5 +16,5 @@ export default function VideoPreview({ stream }: { stream: MediaStream | null })
 		return null;
 	}
 
-	return <video className={styles.video} ref={videoRef} autoPlay />;
+	return <video className={styles.video} ref={videoRef} autoPlay playsInline />;
 };
