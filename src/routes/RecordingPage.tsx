@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 
 import { useReactMediaRecorder } from "react-media-recorder-2"
 
@@ -25,6 +25,9 @@ export default function RecordingPage() {
         <>
 			{!mediaBlobUrl && <VideoPreview stream={previewStream} />}
 			<RecordingButton onStart={startRecording} onStop={stopRecording} duration={15} />
+			<Link to={'/record'} state={{ facing: facing === 'user' ? 'environment' : 'user' }}>
+				<h1>Change camera</h1>
+			</Link>
 		</>
     )
 }
