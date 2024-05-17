@@ -25,7 +25,7 @@ export default function RecordingPage() {
         <>
 			{!mediaBlobUrl && <VideoPreview stream={previewStream} />}
 			<RecordingButton onStart={startRecording} onStop={stopRecording} duration={15} />
-			<Link to={'/record'} state={{ facing: facing === 'user' ? 'environment' : 'user' }}>
+			<Link to={'/record'} state={{ facing: facing === 'user' ? 'environment' : 'user' }} onClick={() => window.location.reload()} >
 				<h1>Change camera</h1>
 			</Link>
 		</>
