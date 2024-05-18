@@ -28,7 +28,7 @@ export default function RecordingPage() {
     return (
         <div className={styles.container}>
 			{!mediaBlobUrl && <VideoPreview stream={previewStream} />}
-			<RecordingButton onStart={startRecording} onStop={stopRecording} duration={15} />
+			<RecordingButton onStart={startRecording} onStop={stopRecording} duration={30} />
 			{ status !== 'recording' &&
 			<div className={styles.camera}>
 				<Link to={'/record'} state={{ facing: facing === 'user' ? 'environment' : 'user' }} onClick={() => window.location.reload()} >

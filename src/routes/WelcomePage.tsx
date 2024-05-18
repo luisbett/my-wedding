@@ -16,7 +16,7 @@ export default function WelcomePage() {
             <div className={styles.button}>
                 <h2>Leticia & Luis</h2>
                 <p>Grave sua mensagem para os noivos!</p>
-                <Button buttonTitle="Gravar vídeo" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user' } })}} />
+                <Button buttonTitle="Gravar vídeo" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions')}} />
             </div>
         </div>
     )

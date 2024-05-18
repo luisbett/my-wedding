@@ -60,7 +60,6 @@ export default function UploadingPage() {
 				<h2>Seu vídeo foi enviado!</h2>
 				<Button buttonTitle="Gravar outro" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user' } })}} />
 			</> }
-			
         </div>
     )
 }
