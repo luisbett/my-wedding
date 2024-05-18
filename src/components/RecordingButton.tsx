@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 import { RecordingButtonProps } from '../types/recordingButton'
 
+import { MdFiberManualRecord } from 'react-icons/md'
+
 import styles from './RecordingButton.module.css'
 
 export function RecordingButton({ onStart, onStop, duration }: RecordingButtonProps) {
@@ -68,6 +70,7 @@ export function RecordingButton({ onStart, onStop, duration }: RecordingButtonPr
 	return (
 		<div className={styles.container}>
 			<div className={`${styles['timer']} ${isRecording ? styles.recording : ''}`}>
+				<MdFiberManualRecord />
 				{counter}s
 			</div>
 			<div className={`${styles['recording-button']} ${isRecording ? styles.recording : ''}`} onClick={toggleRecording}>

@@ -1,13 +1,21 @@
 import { useEffect, useState } from "react"
 
-import { Link, useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 import { ref, uploadBytesResumable } from "firebase/storage"
 import { storage } from "../config/firebase"
 
+import { Hearts } from "react-loading-icons"
+import { FaCheck } from "react-icons/fa"
+
+import Button from "../components/Button"
+
 import styles from './UploadingPage.module.css'
 
 export default function UploadingPage() {
+
+	//Navigation hook
+	const navigate = useNavigate()
 
 	//Get state from location
 	const { state } = useLocation()
@@ -41,16 +49,16 @@ export default function UploadingPage() {
 
     return (
         <div className={styles.container}>
-            { percentage !== 100 
-			? <>
-				<h1>Estamos enviando o seu vídeo</h1>
+            { percentage !== 100 ?
+			<>
+				<Hearts fill="#EF2B7C" />
+				<h2>Estamos enviando o seu vídeo</h2>
 				<p>{percentage}%</p>
-			</>
-			: <>
-				<h1>Seu vídeo foi enviado!</h1>
-				<Link to={'/'}>
-					<h2>Gravar outro vídeo</h2>
-				</Link>
+			</> :
+			<>
+				<FaCheck fill="#EF2B7C" size="35px"/>
+				<h2>Seu vídeo foi enviado!</h2>
+				<Button buttonTitle="Gravar outro" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user' } })}} />
 			</> }
 			
         </div>

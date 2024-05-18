@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     background-color: #EF2B7C;
-    color: #FFFFFF;
+    color: #FDE7F0;
     border-radius: 10px;
     border: 2px solid #EF2B7C;
     cursor: pointer;
@@ -14,7 +14,7 @@
 }
 
 .fuchsia:hover {
-    background-color: #FFFFFF;
+    background-color: #FDE7F0;
     border: 2px solid #EF2B7C;
     color: #EF2B7C;
 }

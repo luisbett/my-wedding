@@ -38,6 +38,9 @@
 }
 
 .timer {
+	position: fixed;
+	top: 30px;
+	right: 30px;
 	width: 50px;
 	height: 50px;
 	font-size: 20px;
@@ -49,7 +52,21 @@
 	color: transparent;
 }
 
+.timer svg {
+	color: transparent;
+}
+
 .timer.recording {
 	color: #000000;
 	text-shadow: 1px 1px 2px #FFFFFF;
 }
+
+.timer.recording svg {
+	color: red;
+	animation: blinker 0.8s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+}
+
+@keyframes blinker {  
+	from { opacity: 1; }
+	to { opacity: 0; }
+  }
