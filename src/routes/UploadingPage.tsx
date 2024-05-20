@@ -53,6 +53,7 @@ export default function UploadingPage() {
 			<>
 				<Hearts fill="#EF2B7C" />
 				<h2>Estamos enviando o seu vídeo</h2>
+				<p>Por favor, não feche e nem atualize essa página</p>
 				<p>{percentage}%</p>
 			</> :
 			<>
