@@ -10,11 +10,4 @@
     border-radius: 10px;
     border: 2px solid #EF2B7C;
     cursor: pointer;
-    transition: .3s;
-}
-
-.fuchsia:hover {
-    background-color: #FDE7F0;
-    border: 2px solid #EF2B7C;
-    color: #EF2B7C;
 }

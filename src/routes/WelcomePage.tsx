@@ -10,13 +10,13 @@ export default function WelcomePage() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.image}>
-                <img src="/wedding-sample.jpg" alt="Foto dos noivos" />
-            </div>
+            <div className={styles.image}></div>
             <div className={styles.button}>
-                <h2>Leticia & Luis</h2>
-                <p>Grave sua mensagem para os noivos!</p>
-                <Button buttonTitle="Gravar vídeo" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions')}} />
+                <h2>👰🏻‍♀️ Leticia & Luis 🤵🏼</h2>
+                <p>Bem vindos ao nosso website!</p>
+                <Button buttonTitle="🍯 Operação Lua de Mel" buttonStyle="fuchsia" buttonOnClick={() => {window.open('https://www.google.com', '_blank')}} />
+                <Button buttonTitle="🤳🏼 Filtro do Instagram" buttonStyle="fuchsia" buttonOnClick={() => {window.open('https://www.google.com', '_blank')}} />
+                <Button buttonTitle="🎥 Gravar vídeo" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions')}} />
             </div>
         </div>
     )

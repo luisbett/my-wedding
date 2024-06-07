@@ -6,22 +6,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #FDE7F0;
 }
 
 .image {
-    height: 60vh;
+    height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.image img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%
+    background-image: url('/wedding-sample.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.5;
 }
 
 .button {
@@ -32,4 +26,5 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    position: relative;
 }
