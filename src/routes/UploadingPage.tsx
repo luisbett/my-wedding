@@ -60,6 +60,7 @@ export default function UploadingPage() {
 				<FaCheck fill="#EF2B7C" size="35px"/>
 				<h2>Seu vídeo foi enviado!</h2>
 				<Button buttonTitle="Gravar outro" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user' } })}} />
+				<Button buttonTitle="Voltar ao início" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
 			</> }
         </div>
     )

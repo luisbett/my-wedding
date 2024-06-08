@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom"
 
 import Button from "../components/Button"
 
-import styles from './InstructionsPage.module.css'
+import styles from './InstructionsPage2.module.css'
 
-export default function InstructionsPage() {
+export default function InstructionsPage2() {
 
     //Navigation hook
     const navigate = useNavigate()
@@ -15,6 +15,7 @@ export default function InstructionsPage() {
             <p>1. Na próxima tela, clique em "Permitir" para que seja possível a gravação do vídeo no seu celular.</p>
             <p>2. Cada vídeo pode ter uma duração máxima de 30 segundos. No entanto, você pode gravar quantos vídeos desejar. 😀</p>
             <Button buttonTitle="Entendi!" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user' } })}} />
+            <Button buttonTitle="Voltar" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions1')}} />
         </div>
     )
 }
