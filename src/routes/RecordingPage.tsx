@@ -27,7 +27,7 @@ export default function RecordingPage() {
 
     return (
         <div className={styles.container}>
-			{!mediaBlobUrl && <VideoPreview stream={previewStream} />}
+			{!mediaBlobUrl && <VideoPreview stream={previewStream} facing={facing} />}
 			<RecordingButton onStart={startRecording} onStop={stopRecording} duration={30} />
 			{ status !== 'recording' &&
 			<div className={styles.camera}>

@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react"
 
+import { VideoProps } from "../types/video"
+
 import styles from './VideoPreview.module.css'
 
-export default function VideoPreview({ stream }: { stream: MediaStream | null }) {
+export default function VideoPreview({ stream, facing }: VideoProps) {
 
 	const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -16,5 +18,5 @@ export default function VideoPreview({ stream }: { stream: MediaStream | null })
 		return null;
 	}
 
-	return <video className={styles.video} ref={videoRef} autoPlay playsInline />;
+	return <video className={`${styles['video']} ${facing === 'user' ? styles.flip : ''}`} ref={videoRef} autoPlay playsInline />;
 };
