@@ -1,0 +1,16 @@
+.language {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EF2B7C;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.language img {
+    width: 2rem;
+}

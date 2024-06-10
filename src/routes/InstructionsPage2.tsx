@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 import Button from "../components/Button"
 
@@ -9,13 +10,16 @@ export default function InstructionsPage2() {
     //Navigation hook
     const navigate = useNavigate()
 
+    //Translation hook
+    const { t } = useTranslation()
+
     return (
         <div className={styles.container}>
-            <h2>Instruções</h2>
-            <p>1. Na próxima tela, clique em "Permitir" para que seja possível a gravação do vídeo no seu celular.</p>
-            <p>2. Cada vídeo pode ter uma duração máxima de 30 segundos. No entanto, você pode gravar quantos vídeos desejar. 😀</p>
-            <Button buttonTitle="Entendi!" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user' } })}} />
-            <Button buttonTitle="Voltar" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions1')}} />
+            <h2>{t('instructions2PageTitle')}</h2>
+            <p>{t('instructions2PageSentence1')}</p>
+            <p>{t('instructions2PageSentence2')}</p>
+            <Button buttonTitle={t('instructions2PageButton')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user' } })}} />
+            <Button buttonTitle={t('goBackButton')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions1')}} />
         </div>
     )
 }

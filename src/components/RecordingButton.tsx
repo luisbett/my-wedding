@@ -6,7 +6,7 @@ import { MdFiberManualRecord } from 'react-icons/md'
 
 import styles from './RecordingButton.module.css'
 
-export function RecordingButton({ onStart, onStop, duration }: RecordingButtonProps) {
+export default function RecordingButton({ onStart, onStop, duration }: RecordingButtonProps) {
 
 	//States
 	const [isRecording, setIsRecording] = useState(false)
@@ -79,5 +79,3 @@ export function RecordingButton({ onStart, onStop, duration }: RecordingButtonPr
 		</div>
 	);
 };
-
-export default RecordingButton;

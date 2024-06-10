@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 import Button from "../components/Button"
 
@@ -9,13 +10,16 @@ export default function InstructionsPage1() {
     //Navigation hook
     const navigate = useNavigate()
 
+    //Translation hook
+    const { t } = useTranslation()
+
     return (
         <div className={styles.container}>
-            <h2>Gravar vídeo</h2>
-            <p>Fique a vontade para gravar sua mensagem para os noivos e também para gravar momentos dessa noite que será muito especial!</p>
-            <p>Ao finalizar a gravação do vídeo, ele será enviado automaticamente aos noivos.</p>
-            <Button buttonTitle="Gravar vídeo" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions2')}} />
-            <Button buttonTitle="Voltar" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
+            <h2>{t('instructions1PageTitle')}</h2>
+            <p>{t('instructions1PageSentence1')}</p>
+            <p>{t('instructions1PageSentence2')}</p>
+            <Button buttonTitle={t('instructions1PageButton')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions2')}} />
+            <Button buttonTitle={t('goBackButton')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
         </div>
     )
 }

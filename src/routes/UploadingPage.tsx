@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-
 import { useLocation, useNavigate } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 import { ref, uploadBytesResumable } from "firebase/storage"
 import { storage } from "../config/firebase"
@@ -16,6 +16,9 @@ export default function UploadingPage() {
 
 	//Navigation hook
 	const navigate = useNavigate()
+
+	//Translation hook
+    const { t } = useTranslation()
 
 	//Get state from location
 	const { state } = useLocation()
@@ -52,15 +55,15 @@ export default function UploadingPage() {
             { percentage !== 100 ?
 			<>
 				<Hearts fill="#EF2B7C" />
-				<h2>Estamos enviando o seu vídeo</h2>
-				<p>Por favor, não feche e nem atualize essa página</p>
+				<h2>{t('uploadingPageSentence1')}</h2>
+				<p>{t('uploadingPageSentence2')}</p>
 				<p>{percentage}%</p>
 			</> :
 			<>
 				<FaCheck fill="#EF2B7C" size="35px"/>
-				<h2>Seu vídeo foi enviado!</h2>
-				<Button buttonTitle="Gravar outro" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user' } })}} />
-				<Button buttonTitle="Voltar ao início" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
+				<h2>{t('uploadingPageSentence3')}</h2>
+				<Button buttonTitle={t('uploadingPageButton1')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user' } })}} />
+				<Button buttonTitle={t('uploadingPageButton2')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
 			</> }
         </div>
     )
