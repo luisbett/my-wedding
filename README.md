@@ -34,7 +34,7 @@ This project is completed.
 
 ## About
 
-This was my fourth project built using React JS and TypeScript. The objective was to create a web app where my guests could record videos at my wedding party and automatically upload them to a storage folder after finishing the recording. This way, they wouldn't need to send their videos manually.
+This was my fourth project built using React JS + TypeScript. The objective was to create a web app where my guests could record videos at my wedding party and automatically upload them to a storage folder after finishing the recording. This way, they wouldn't need to send their videos manually.
 
 I used [Firebase Storage](https://firebase.google.com/products/storage) service to save the videos recorded by my guests.
 
