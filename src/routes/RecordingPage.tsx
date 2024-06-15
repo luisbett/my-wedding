@@ -1,5 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
 
+import { useTranslation } from "react-i18next"
+
 import { useReactMediaRecorder } from "react-media-recorder-2"
 
 import { IoIosReverseCamera } from "react-icons/io"
@@ -14,6 +16,12 @@ export default function RecordingPage() {
     //Navigation hook
 	const navigate = useNavigate()
 
+	//Translation hook
+    const { i18n } = useTranslation()
+
+    //Save current language
+	const currentLang = i18n.language
+
 	//Get state from location
 	const { state } = useLocation()
 
@@ -21,9 +29,15 @@ export default function RecordingPage() {
 	const { facing } = state
 
 	//useMediaRecorder hook
-	const { status, startRecording, stopRecording, mediaBlobUrl, previewStream } = useReactMediaRecorder({ video: { facingMode: { exact: facing } }, askPermissionOnMount: true, onStop(_blobUrl, blob) {
+	const { status, startRecording, stopRecording, mediaBlobUrl, previewStream } = useReactMediaRecorder({ video: { facingMode: { exact: facing } }, /*askPermissionOnMount: true,*/ onStop(_blobUrl, blob) {
 		navigate('/upload', { state: { videoBlob: blob } } )
 	} })
+
+	//Handle click function
+	const handleClick = () => {
+		window.location.reload()
+		i18n.changeLanguage(currentLang)
+	}
 
     return (
         <div className={styles.container}>
@@ -31,7 +45,7 @@ export default function RecordingPage() {
 			<RecordingButton onStart={startRecording} onStop={stopRecording} duration={30} />
 			{ status !== 'recording' &&
 			<div className={styles.camera}>
-				<Link to={'/record'} state={{ facing: facing === 'user' ? 'environment' : 'user' }} onClick={() => window.location.reload()} >
+				<Link to={'/record'} state={{ facing: facing === 'user' ? 'environment' : 'user' }} onClick={handleClick} >
 					<IoIosReverseCamera fill="#FFFFFF" size="35px" />
 				</Link>
 			</div> }
