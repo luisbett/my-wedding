@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 import Button from "../components/Button"
 
 import styles from './SchedulePage.module.css'
-import { useTranslation } from "react-i18next"
 
 export default function SchedulePage() {
 

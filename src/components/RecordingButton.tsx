@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import { RecordingButtonProps } from '../types/recordingButton'
-
 import { MdFiberManualRecord } from 'react-icons/md'
+
+import { RecordingButtonProps } from '../types/recordingButton'
 
 import styles from './RecordingButton.module.css'
 
