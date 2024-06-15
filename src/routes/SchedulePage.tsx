@@ -19,7 +19,7 @@ export default function SchedulePage() {
             <p>{t('schedulePageItem1')}</p>
             <p>{t('schedulePageItem2')}</p>
             <p>{t('schedulePageItem3')}</p>
-            <Button buttonTitle="Voltar" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
+            <Button buttonTitle={t('goBackButton')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
         </div>
     )
 }

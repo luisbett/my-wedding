@@ -28,7 +28,7 @@ export default function MenuPage() {
             <p>{t('menuPageSubTitle3Item1')}</p>
             <p>{t('menuPageSubTitle3Item2')}</p>
             <p>{t('menuPageSubTitle3Item3')}</p>
-            <Button buttonTitle="Voltar" buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
+            <Button buttonTitle={t('goBackButton')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
         </div>
     )
 }
