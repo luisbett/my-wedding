@@ -19,25 +19,19 @@ export default function RecordingPage() {
 	//Translation hook
     const { i18n } = useTranslation()
 
-    //Save current language
-	const currentLang = i18n.language
-
 	//Get state from location
 	const { state } = useLocation()
 
 	//Get facing mode from state
-	const { facing } = state
+	const { facing, lang } = state
+
+	//Set language from state
+	i18n.changeLanguage(lang)
 
 	//useMediaRecorder hook
 	const { status, startRecording, stopRecording, mediaBlobUrl, previewStream } = useReactMediaRecorder({ video: { facingMode: { exact: facing } }, askPermissionOnMount: true, onStop(_blobUrl, blob) {
 		navigate('/upload', { state: { videoBlob: blob } } )
 	} })
-
-	//Handle click function
-	const handleClick = () => {
-		window.location.reload()
-		i18n.changeLanguage(currentLang)
-	}
 
     return (
         <div className={styles.container}>
@@ -45,7 +39,7 @@ export default function RecordingPage() {
 			<RecordingButton onStart={startRecording} onStop={stopRecording} duration={30} />
 			{ status !== 'recording' &&
 			<div className={styles.camera}>
-				<Link to={'/record'} state={{ facing: facing === 'user' ? 'environment' : 'user' }} onClick={handleClick} >
+				<Link to={'/record'} state={{ facing: facing === 'user' ? 'environment' : 'user', lang: i18n.language }} onClick={() => { window.location.reload() }} >
 					<IoIosReverseCamera fill="#FFFFFF" size="35px" />
 				</Link>
 			</div> }
