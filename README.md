@@ -12,7 +12,25 @@ This project is completed.
 
 ## Project Screen Shots
 
-![gif_1](/public/gif_1.gif)
+![screenshot_1](/public/screenshot_1.png)
+
+![screenshot_2](/public/screenshot_2.png)
+
+![screenshot_3](/public/screenshot_3.png)
+
+![screenshot_4](/public/screenshot_4.png)
+
+![screenshot_5](/public/screenshot_5.png)
+
+![screenshot_6](/public/screenshot_6.png)
+
+![screenshot_7](/public/screenshot_7.png)
+
+![screenshot_8](/public/screenshot_8.png)
+
+![screenshot_9](/public/screenshot_9.png)
+
+![screenshot_10](/public/screenshot_10.png)
 
 ## About
 
