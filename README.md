@@ -12,19 +12,15 @@ This project is completed.
 
 ## Project Screen Shots
 
-![screenshot_1](/public/screenshot_1.png)
-
-![screenshot_2](/public/screenshot_2.png)
-
-![screenshot_3](/public/screenshot_3.png)
+![gif_1](/public/gif_1.gif)
 
 ## About
 
-This was my fourth project built using React JS + TypeScript, and the objective was to create a web app where my guests could record videos at my wedding party and automatically upload them to my Firebase Storage folder after finishing recording it. This way, they wouldn't need to send the video manually after recording it.
+This was my fourth project built using React JS and TypeScript. The objective was to create a web app where my guests could record videos at my wedding party and automatically upload them to a storage folder after finishing the recording. This way, they wouldn't need to send their videos manually.
 
-I used the [Firebase Storage](https://firebase.google.com/products/storage) service to save the videos from my guests.
+I used [Firebase Storage](https://firebase.google.com/products/storage) service to save the videos recorded by my guests.
 
-After creating this feature I decided to make the app able to give important information about my wedding party to my guests as well. On it they could see the schedule of the night, the menu, the wishlist for presents and my PIX key used in Brazil to send money, that they could give as a present as well.
+After creating this feature, I decided to make the app able to provide important information about my wedding party to my guests as well. Through the app, they could see the schedule of the night, the menu, the wishlist for presents, and my PIX key (used in Brazil to send money), which they could also use to give a monetary gift.
 
 In this project, I used different packages:
 
