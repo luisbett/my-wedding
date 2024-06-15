@@ -15,8 +15,8 @@ export default function LanguageSwitcher () {
     return(
         <div className={styles.language} onClick={handleClick}>
             { i18n.language === 'pt' 
-            ? <img src='/usa-flag-icon.png' />
-            : <img src='/brazil-flag-icon.png' /> }
+            ? <img src='/us.png' />
+            : <img src='/br.png' /> }
         </div>
     )
 }
