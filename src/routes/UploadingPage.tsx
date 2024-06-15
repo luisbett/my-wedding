@@ -62,7 +62,7 @@ export default function UploadingPage() {
 			<>
 				<FaCheck fill="#EF2B7C" size="35px"/>
 				<h2>{t('uploadingPageSentence3')}</h2>
-				<Button buttonTitle={t('uploadingPageButton1')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user', lang: i18n.language } })}} />
+				<Button buttonTitle={t('uploadingPageButton1')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user', currentLang: i18n.language } })}} />
 				<Button buttonTitle={t('uploadingPageButton2')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
 			</> }
         </div>

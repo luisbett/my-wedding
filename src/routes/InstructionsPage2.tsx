@@ -18,7 +18,7 @@ export default function InstructionsPage2() {
             <h2>{t('instructions2PageTitle')}</h2>
             <p>{t('instructions2PageSentence1')}</p>
             <p>{t('instructions2PageSentence2')}</p>
-            <Button buttonTitle={t('instructions2PageButton')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user', lang: i18n.language } })}} />
+            <Button buttonTitle={t('instructions2PageButton')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user', currentLang: i18n.language } })}} />
             <Button buttonTitle={t('goBackButton')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions1')}} />
         </div>
     )
