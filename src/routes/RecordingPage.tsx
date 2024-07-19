@@ -3,10 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 import { useReactMediaRecorder } from "react-media-recorder-2"
 import { IoIosReverseCamera } from "react-icons/io"
-
 import VideoPreview from "../components/VideoPreview"
 import RecordingButton from "../components/RecordingButton"
-
 import styles from './RecordingPage.module.css'
 
 export default function RecordingPage() {

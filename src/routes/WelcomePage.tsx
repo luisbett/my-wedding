@@ -1,9 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next"
-
+import { motion } from "framer-motion"
 import LanguageSwitcher from "../components/LanguageSwitcher"
 import Button from "../components/Button"
-
 import styles from './WelcomePage.module.css'
 
 export default function WelcomePage() {
@@ -15,7 +14,10 @@ export default function WelcomePage() {
     const { t } = useTranslation()
 
     return (
-        <div className={styles.container}>
+        <motion.div className={styles.container}
+            initial={{ x: '-100vw' }}
+            animate={{ x: 0 }}
+            transition={{ type: 'spring', stiffness: 70 }}>
             <div className={styles.image}></div>
             <div className={styles.button}>
                 <LanguageSwitcher />
@@ -26,8 +28,8 @@ export default function WelcomePage() {
                 <Button buttonTitle={t('welcomePageBtn3')} buttonStyle="fuchsia" buttonOnClick={() => {window.open('https://noivos.casar.com/leticia-luis-10-08-24#/presentes', '_blank')}} />
                 <Button buttonTitle={t('welcomePageBtn4')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/honey-moon')}} />
                 <Button buttonTitle={t('welcomePageBtn5')} buttonStyle="fuchsia" buttonOnClick={() => {window.open('https://www.google.com', '_blank')}} />
-                <Button buttonTitle={t('welcomePageBtn6')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions1')}} />
+                <Button buttonTitle={t('welcomePageBtn6')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions1', { state: { prevComponent: 'welcome' } })}} />
             </div>
-        </div>
+        </motion.div>
     )
 }

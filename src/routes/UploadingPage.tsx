@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next"
-
 import { ref, uploadBytesResumable } from "firebase/storage"
 import { storage } from "../config/firebase"
-
 import { Hearts } from "react-loading-icons"
 import { FaCheck } from "react-icons/fa"
-
 import Button from "../components/Button"
-
 import styles from './UploadingPage.module.css'
 
 export default function UploadingPage() {
@@ -52,19 +48,21 @@ export default function UploadingPage() {
 
     return (
         <div className={styles.container}>
-            { percentage !== 100 ?
-			<>
-				<Hearts fill="#EF2B7C" />
-				<h2>{t('uploadingPageSentence1')}</h2>
-				<p>{t('uploadingPageSentence2')}</p>
-				<p>{percentage}%</p>
-			</> :
-			<>
-				<FaCheck fill="#EF2B7C" size="35px"/>
-				<h2>{t('uploadingPageSentence3')}</h2>
-				<Button buttonTitle={t('uploadingPageButton1')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user', currentLang: i18n.language } })}} />
-				<Button buttonTitle={t('uploadingPageButton2')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
-			</> }
+			<div className={styles.card}>
+				{ percentage !== 100 ?
+				<>
+					<Hearts fill="#EF2B7C" />
+					<h2>{t('uploadingPageSentence1')}</h2>
+					<p>{percentage}%</p>
+					<p>{t('uploadingPageSentence2')}</p>
+				</> :
+				<>
+					<FaCheck fill="#EF2B7C" size="35px"/>
+					<h2>{t('uploadingPageSentence3')}</h2>
+					<Button buttonTitle={t('uploadingPageButton1')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/record', { state: { facing: 'user', currentLang: i18n.language } })}} />
+					<Button buttonTitle={t('uploadingPageButton2')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/')}} />
+				</> }
+			</div>
         </div>
     )
 }
