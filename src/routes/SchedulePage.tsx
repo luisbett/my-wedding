@@ -28,11 +28,17 @@ export default function SchedulePage() {
                 <p>{t('schedulePageItem1')}</p>
                 <p>{t('schedulePageItem2')}</p>
                 <p>{t('schedulePageItem3')}</p>
-                <p>{t('schedulePageItem3')}</p>
-                <p>{t('schedulePageItem3')}</p>
-                <p>{t('schedulePageItem3')}</p>
-                <p>{t('schedulePageItem3')}</p>
-                <p>{t('schedulePageItem3')}</p>
+                <p>{t('schedulePageItem4')}</p>
+                <p>{t('schedulePageItem6')}</p>
+                <p>{t('schedulePageItem7')}</p>
+                <p>{t('schedulePageItem8')}</p>
+                <p>{t('schedulePageItem9')}</p>
+                <p>{t('schedulePageItem10')}</p>
+                <p>{t('schedulePageItem11')}</p>
+                <p>{t('schedulePageItem12')}</p>
+                <p>{t('schedulePageItem13')}</p>
+                <p>{t('schedulePageItem14')}</p>
+                <p>{t('schedulePageItem15')}</p>
             </div>
         </motion.div>
     )

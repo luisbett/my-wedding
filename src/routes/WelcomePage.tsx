@@ -27,7 +27,7 @@ export default function WelcomePage() {
                 <Button buttonTitle={t('welcomePageBtn2')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/menu')}} />
                 <Button buttonTitle={t('welcomePageBtn3')} buttonStyle="fuchsia" buttonOnClick={() => {window.open('https://noivos.casar.com/leticia-luis-10-08-24#/presentes', '_blank')}} />
                 <Button buttonTitle={t('welcomePageBtn4')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/honey-moon')}} />
-                <Button buttonTitle={t('welcomePageBtn5')} buttonStyle="fuchsia" buttonOnClick={() => {window.open('https://www.google.com', '_blank')}} />
+                <Button buttonTitle={t('welcomePageBtn5')} buttonStyle="fuchsia" buttonOnClick={() => {window.open('https://www.instagram.com/ar/788040303474966/', '_blank')}} />
                 <Button buttonTitle={t('welcomePageBtn6')} buttonStyle="fuchsia" buttonOnClick={() => {navigate('/instructions1', { state: { prevComponent: 'welcome' } })}} />
             </div>
         </motion.div>
