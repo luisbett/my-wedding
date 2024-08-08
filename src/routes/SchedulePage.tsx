@@ -39,6 +39,9 @@ export default function SchedulePage() {
                 <p>{t('schedulePageItem13')}</p>
                 <p>{t('schedulePageItem14')}</p>
                 <p>{t('schedulePageItem15')}</p>
+                <p>{t('schedulePageItem16')}</p>
+                <p>{t('schedulePageItem17')}</p>
+                <p>{t('schedulePageItem18')}</p>
             </div>
         </motion.div>
     )

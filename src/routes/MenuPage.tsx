@@ -34,6 +34,7 @@ export default function MenuPage() {
                 <p>{t('menuPage1SubTitle1Item5')}</p>
                 <p>{t('menuPage1SubTitle1Item6')}</p>
                 <p>{t('menuPage1SubTitle1Item7')}</p>
+                <p>{t('menuPage1SubTitle1Item8')}</p>
                 <h3>{t('menuPage1SubTitle2')}</h3>
                 <p>{t('menuPage1SubTitle2Item1')}</p>
                 <p>{t('menuPage1SubTitle2Item2')}</p>
